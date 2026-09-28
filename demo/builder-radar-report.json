@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "run_label": "synthetic",
+    "source_count": 5,
+    "generated": "2026-09-28"
+  },
+  "ideas": [
+    {
+      "rank": 1,
+      "name": "Recurring On-Chain Report Agent",
+      "deliverable": "A scheduled agent that pulls a supplied set of DEX pools or wallet addresses via read-only public APIs and posts a formatted volume/treasury report on a fixed cadence.",
+      "buyer": "Small DeFi teams and independent traders who currently pull this data by hand.",
+      "evidence": [
+        { "id": "REC-002", "label": "observed", "note": "Job post explicitly requests a daily DEX volume summary bot, states a $200 budget." },
+        { "id": "REC-005", "label": "observed", "note": "Support ticket records a customer request for an automatic weekly treasury summary instead of manual CSV pulls." },
+        { "id": "REC-001", "label": "inference", "note": "Manual spreadsheet-copying pain from a payments dashboard suggests the same recurring-report pattern applies beyond DeFi." },
+        { "id": "REC-002", "label": "unverified_demand", "note": "The $200 budget is a posted figure, not a completed payment." }
+      ],
+      "limitations": [
+        "Needs read-only API access or public endpoints supplied by the buyer; no custody of funds or keys.",
+        "Report generation only — no trading signals or advice.",
+        "Accuracy depends entirely on the freshness/correctness of the public data source."
+      ],
+      "next_validation_step": "Post one fixed-price offer ($150-200) scoped to exactly this deliverable on a freelance board or DeFi builder channel; treat 3+ serious replies within a week as validation."
+    },
+    {
+      "rank": 2,
+      "name": "Protocol Parameter-Change Watcher",
+      "deliverable": "An agent that checks a supplied list of up to 5 protocol doc URLs on a schedule and outputs a plain-text diff of what changed since the last check.",
+      "buyer": "Crypto newsletter writers and independent researchers who track multiple protocols.",
+      "evidence": [
+        { "id": "REC-004", "label": "observed", "note": "Post states manually checking 15 protocol docs weekly before writing a newsletter, asks for an agent to do it." },
+        { "id": "REC-003", "label": "inference", "note": "Same 'manual repeated checking of external sources' pattern as the sanctions-flagging request, suggesting watcher-style agents are a recurring category." },
+        { "id": "REC-004", "label": "unverified_demand", "note": "Only one source expresses this want; no confirmed willingness to pay stated." }
+      ],
+      "limitations": [
+        "Only works reliably on pages with stable, diffable structure; heavy redesigns cause false positives.",
+        "Doesn't interpret whether a change is material, only that text changed.",
+        "Bounded to 5 doc URLs per run by the skill's own source policy."
+      ],
+      "next_validation_step": "Run the watcher against 3 real protocol docs for 2 weeks and count false-positive diffs before offering it to anyone."
+    },
+    {
+      "rank": 3,
+      "name": "Wallet Hop-Distance Flagging Agent",
+      "deliverable": "An agent that takes a supplied wallet list and a public sanctions list, then outputs a CSV flagging wallets within N hops of a sanctioned address, using public chain data only.",
+      "buyer": "Compliance-adjacent teams at small exchanges or protocols who currently do this by hand.",
+      "evidence": [
+        { "id": "REC-003", "label": "observed", "note": "GitHub issue explicitly requests auto-flagging of wallets within 2 hops of sanctioned addresses, notes current manual spreadsheet process." }
+      ],
+      "limitations": [
+        "Single source of evidence — weakest-supported idea of the three.",
+        "Accuracy bounded by the currency of whatever public sanctions list is supplied; not legal or compliance advice.",
+        "Hop-distance heuristic will miss laundering patterns that don't fit simple N-hop graphs."
+      ],
+      "next_validation_step": "Run the agent against one publicly known sanctioned test wallet and manually confirm it correctly flags 1- and 2-hop counterparties before showing it to anyone."
+    }
+  ]
+}

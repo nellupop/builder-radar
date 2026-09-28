@@ -1,0 +1,46 @@
+{
+  "synthetic": true,
+  "note": "All records below are fabricated for demonstration/testing of the Builder Radar skill. No real people, platforms, or events are represented.",
+  "records": [
+    {
+      "id": "REC-001",
+      "type": "forum_post",
+      "platform": "synthetic-indie-forum",
+      "url": "local://fixtures/rec-001",
+      "date": "2026-06-03",
+      "text": "Spent 6 hours this week manually copying data from my payments dashboard into a spreadsheet for my accountant. Anyone have a script for this? I'd pay for something simple that just runs monthly."
+    },
+    {
+      "id": "REC-002",
+      "type": "job_post",
+      "platform": "synthetic-freelance-board",
+      "url": "local://fixtures/rec-002",
+      "date": "2026-06-10",
+      "text": "Looking for someone to build a bot that summarizes daily trading volume from 3 DEX pools and posts a short report every morning. Budget: $200 flat."
+    },
+    {
+      "id": "REC-003",
+      "type": "github_issue",
+      "platform": "synthetic-defi-tool-repo",
+      "url": "local://fixtures/rec-003",
+      "date": "2026-05-20",
+      "text": "Feature request: auto-flag wallet addresses that receive funds from sanctioned addresses within 2 hops. Currently doing this manually with a spreadsheet, it's slow and error-prone."
+    },
+    {
+      "id": "REC-004",
+      "type": "social_post",
+      "platform": "synthetic-microblog",
+      "url": "local://fixtures/rec-004",
+      "date": "2026-06-15",
+      "text": "Every week I manually check 15 protocol docs for parameter changes before I write my newsletter. Someone build me an agent for this please."
+    },
+    {
+      "id": "REC-005",
+      "type": "support_ticket",
+      "platform": "internal-helpdesk-log (local record, no URL)",
+      "url": null,
+      "date": "2026-04-28",
+      "text": "Customer asked whether we could auto-generate a weekly summary of their on-chain treasury flows instead of them pulling CSVs by hand each Friday."
+    }
+  ]
+}
